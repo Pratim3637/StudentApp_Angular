@@ -1,13 +1,40 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>Stdapp</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <title>Stdapp</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        h3 {
+            text-align: center;
+        }
+        
+        #btn {
+            border-radius: 5px;
+            size: 12px;
+        }
+    </style>
 </head>
-<body>
-  <app-root></app-root>
+
+<body class="mat-typography">
+    <app-root></app-root>
+    <h3>This page is colour Changing..</h3>
+    <hr>
+    <input type="button" id="btn" value="Change colour">
+    <script>
+        let color = ['red', 'blue', 'green', 'orange', 'yellow '];
+        let btn = document.getElementById('btn');
+        btn.addEventListener("click", function() {
+            let ans = color[Math.floor(Math.random() * color.length)];
+            document.body.style.background = ans;
+        });
+    </script>
 </body>
+
 </html>

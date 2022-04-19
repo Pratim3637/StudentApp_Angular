@@ -1,0 +1,32 @@
+<form>
+    <mat-card class="sample-card">
+        <mat-form-field>
+            <mat-label name="uname">Username:</mat-label>
+            <input matInput #myInputText name="uname" [(ngModel)]="uname">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Password:</mat-label>
+            <input matInput password=" pwd " #pwd>
+        </mat-form-field>
+        <button mat-button (click)="OnClick() ">Submit</button>
+    </mat-card>
+
+    <div>
+        <h2><pre> {{title}} 
+    {{topic}} </pre></h2>
+    </div>
+
+    <div>
+        <!--
+        <h2>Username:{{uname.value}}</h2>-->
+        <h2>Password:{{pwd.value}}</h2>
+    </div>
+    <div>
+        <h2>Displaying Friends Name:</h2>
+        <ul>
+            <li *ngFor=" let emp of empname ">{{emp}}
+
+            </li>
+        </ul>
+    </div>
+</form>

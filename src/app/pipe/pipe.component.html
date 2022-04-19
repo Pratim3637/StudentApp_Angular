@@ -1,0 +1,37 @@
+<p>pipe works!</p>
+<h2>{{empname|formatname}}</h2>
+<h2>
+    <h2>Hey welcome {{empname|formatname}}</h2>
+    <div>
+        <input [(ngModel)]="searchItem" placeholder="Filter">
+
+        <ul>
+            <li *ngFor=" let persons of p1 |filtername:
+        searchItem:'name'">
+                {{persons.name}} | {{persons.place}}
+            </li>
+        </ul>
+    </div>
+
+    All About Pipes
+</h2>
+<p>{{username}}</p>
+<p>{{username|uppercase}}</p>
+<p>{{username |lowercase}}</p>
+<p>{{username |titlecase}}</p>
+<p>{{username |slice:3}}</p>
+<p>{{username |json}}</p>
+
+<h2>{{6.745 |number:'1.2-3'</h2>
+<h2>{{6.745 |number:'3.4-5'</h2>
+<h2>{{6.745 |number:'3.1-2'</h2>
+
+<h2>{{0.50 |percent}}</h2>
+<h2>{{02.50|currency}}</h2>
+<h2>{{02.50|currency :'EUR'}}</h2>
+<h2>{{number1|number:'1.2-3'}}</h2>
+
+<h2>{{date}}</h2>
+<h2>{{date|date:'short'}}</h2>
+<h2>{{date|date:'shortdate'}}</h2>
+<h2>{{date|date:'shortTime'}}</h2>
